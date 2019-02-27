@@ -25,6 +25,8 @@ from settings import dir_exists
 from settings import os_path_isfile
 from settings import normalize_string
 
+from VideoParser import VideoParser
+
 
 #############################################
 # Reads TvTunes information from an NFO file
@@ -350,10 +352,19 @@ class ThemeFiles():
 
             log("ThemeFiles: Duration is %d for file %s" % (duration, filename), self.debug_logging_enabled)
 
+            # Check if the duration of the file is showing as Zero, this means we need to
+            # try and find out the duration ourself
+            if duration < 1:
+                duration = VideoParser().getVideoLength(filename)
+                log("ThemeFiles: Manual find of duration is %d for file %s" % (duration, filename), self.debug_logging_enabled)
+
             if duration > 10:
                 listitem = xbmcgui.ListItem()
-                # Record if the theme should start playing part-way through
-                randomStart = random.randint(0, int(duration * 0.75))
+                # Check if there is a fixed start position
+                randomStart = Settings.getRandomFixedOffset(filename)
+                if (randomStart < 1) or (randomStart >= duration):
+                    # Record if the theme should start playing part-way through
+                    randomStart = random.randint(0, int(duration * 0.75))
                 listitem.setProperty('StartOffset', str(randomStart))
 
                 log("ThemeFiles: Setting Random start of %d for %s" % (randomStart, filename), self.debug_logging_enabled)
@@ -390,11 +401,8 @@ class ThemeFiles():
         if workingPath.startswith("rar://"):
             workingPath = workingPath.replace("rar://", "")
 
-        # Support special paths like smb:// means that we can not just call
-        # os.path.isfile as it will return false even if it is a file
-        # (A bit of a shame - but that's the way it is)
         fileExt = None
-        if workingPath.startswith("smb://") or workingPath.startswith("afp://") or os_path_isfile(workingPath):
+        if os_path_isfile(workingPath):
             fileExt = os.path.splitext(workingPath)[1]
         # If this is a file, then get it's parent directory
         # Also limit file extensions to a maximum of 4 characters
@@ -494,7 +502,9 @@ class ThemeFiles():
             themeFiles = themeFiles + self._getThemeFiles(nfoDir, True)
 
         del nfoRead
-        log("ThemeFiles: Searching %s for %s" % (directory, Settings.getThemeFileRegEx(directory, extensionOnly, self.audioOnly)), self.debug_logging_enabled)
+
+        themeRegex = Settings.getThemeFileRegEx(directory, extensionOnly, self.audioOnly)
+        log("ThemeFiles: Searching %s for %s" % (directory, themeRegex), self.debug_logging_enabled)
 
         # Make sure that the path does not point to a plugin, as we are checking the
         # file-system for themes, not plugins. This can be the case with Emby
@@ -505,12 +515,23 @@ class ThemeFiles():
             if dir_exists(directory):
                 dirs, files = list_dir(directory)
                 for aFile in files:
-                    m = re.search(Settings.getThemeFileRegEx(directory, extensionOnly, self.audioOnly), aFile, re.IGNORECASE)
+                    m = re.search(themeRegex, aFile, re.IGNORECASE)
                     if m:
                         path = os_path_join(directory, aFile)
                         log("ThemeFiles: Found match: %s" % path, self.debug_logging_enabled)
                         # Add the theme file to the list
                         themeFiles.append(path)
+                # Check to see if any themes were found, and if not see if we should try
+                # and use a trailer file instead
+                if (len(themeFiles) < 1) and (not self.audioOnly) and (not extensionOnly) and Settings.useTrailers():
+                    trailerRegEx = Settings.getTrailerFileRegEx()
+                    for aFile in files:
+                        m = re.search(trailerRegEx, aFile, re.IGNORECASE)
+                        if m:
+                            path = os_path_join(directory, aFile)
+                            log("ThemeFiles: Found trailer match: %s" % path, self.debug_logging_enabled)
+                            # Add the trailer file to the list
+                            themeFiles.append(path)
 
         return themeFiles
 
@@ -645,10 +666,19 @@ class MusicThemeFiles():
 
             log("MusicThemeFiles: Duration is %d for file %s" % (duration, filename), self.debug_logging_enabled)
 
+            # Check if the duration of the file is showing as Zero, this means we need to
+            # try and find out the duration ourself
+            if duration < 1:
+                duration = VideoParser().getVideoLength(filename)
+                log("MusicThemeFiles: Manual find of duration is %d for file %s" % (duration, filename), self.debug_logging_enabled)
+
             if duration > 10:
                 listitem = xbmcgui.ListItem()
-                # Record if the theme should start playing part-way through
-                randomStart = random.randint(0, int(duration * 0.75))
+                # Check if there is a fixed start position
+                randomStart = Settings.getRandomFixedOffset(filename)
+                if (randomStart < 1) or (randomStart >= duration):
+                    # Record if the theme should start playing part-way through
+                    randomStart = random.randint(0, int(duration * 0.75))
                 listitem.setProperty('StartOffset', str(randomStart))
 
                 log("MusicThemeFiles: Setting Random start of %d for %s" % (randomStart, filename), self.debug_logging_enabled)

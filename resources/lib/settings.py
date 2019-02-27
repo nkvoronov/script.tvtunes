@@ -63,7 +63,14 @@ def os_path_join(dir, file):
 
 # There has been problems with calling isfile with non ascii characters,
 # so we have this method to try and do the conversion for us
-def os_path_isfile(workingPath,):
+def os_path_isfile(workingPath):
+    # Support special paths like smb:// means that we can not just call
+    # os.path.isfile as it will return false even if it is a file
+    # (A bit of a shame - but that's the way it is)
+    if workingPath.startswith("smb://") or workingPath.startswith("nfs://") or workingPath.startswith("afp://"):
+        # The test for the file existing will not work, so return true
+        return True
+
     # Convert each argument - if an error, then it will use the default value
     # that was passed in
     try:
@@ -150,19 +157,19 @@ class WindowShowing():
 
     @staticmethod
     def isTvShows():
-        return xbmc.getCondVisibility("Container.Content(tvshows)") or WindowShowing.isTvTunesOverrideTvShows()
+        return xbmc.getCondVisibility("Container.Content(tvshows)") or (xbmc.getInfoLabel("ListItem.dbtype") == 'tvshow') or WindowShowing.isTvTunesOverrideTvShows()
 
     @staticmethod
     def isSeasons():
-        return xbmc.getCondVisibility("Container.Content(Seasons)") or WindowShowing.isTvTunesOverrideTvShows()
+        return xbmc.getCondVisibility("Container.Content(Seasons)") or (xbmc.getInfoLabel("ListItem.dbtype") == 'season') or WindowShowing.isTvTunesOverrideTvShows()
 
     @staticmethod
     def isEpisodes():
-        return xbmc.getCondVisibility("Container.Content(Episodes)") or WindowShowing.isTvTunesOverrideTvShows()
+        return xbmc.getCondVisibility("Container.Content(Episodes)") or (xbmc.getInfoLabel("ListItem.dbtype") == 'episode') or WindowShowing.isTvTunesOverrideTvShows()
 
     @staticmethod
     def isMovies():
-        return xbmc.getCondVisibility("Container.Content(movies)") or WindowShowing.isTvTunesOverrideMovie()
+        return xbmc.getCondVisibility("Container.Content(movies)") or (xbmc.getInfoLabel("ListItem.dbtype") == 'movie') or WindowShowing.isTvTunesOverrideMovie()
 
     @staticmethod
     def isScreensaver():
@@ -260,6 +267,8 @@ class WindowShowing():
             if 'special://profile/playlists/video/' in xbmc.getInfoLabel("container.folderpath"):
                 # Check if what is being showed is actually TV Shows
                 showingTvShowTitles = WindowShowing.isTvShows()
+            elif (xbmc.getInfoLabel("ListItem.dbtype") == 'tvshow'):
+                showingTvShowTitles = True
         return showingTvShowTitles
 
     @staticmethod
@@ -339,6 +348,8 @@ class Settings():
         if filename.lower().endswith('.mov'):
             return True
         if filename.lower().endswith('.m2ts'):
+            return True
+        if filename.lower().endswith('.webm'):
             return True
         return False
 
@@ -421,6 +432,17 @@ class Settings():
             themeRegEx = '(.(' + fileTypes + ')$)'
         return themeRegEx
 
+    # Calculates the regular expression to use to search for trailer video files
+    @staticmethod
+    def getTrailerFileRegEx():
+        fileTypes = ""
+        videoFileTypes = Settings.getVideoThemeFileExtensions()
+        if videoFileTypes not in [None, ""]:
+            if len(fileTypes) > 0:
+                fileTypes = fileTypes + '|'
+            fileTypes = fileTypes + videoFileTypes
+        return '(-trailer[ _A-Za-z0-9.-]*.(' + fileTypes + ')$)'
+
     @staticmethod
     def getVideoThemeFileExtensions():
         fileTypes = []
@@ -434,6 +456,8 @@ class Settings():
             fileTypes.append("mov")
         if(ADDON.getSetting("m2ts") == 'true'):
             fileTypes.append("m2ts")
+        if(ADDON.getSetting("webm") == 'true'):
+            fileTypes.append("webm")
         return '|'.join(fileTypes)
 
     @staticmethod
@@ -443,6 +467,15 @@ class Settings():
     @staticmethod
     def isRandomStart():
         return ADDON.getSetting("random") == 'true'
+
+    @staticmethod
+    def getRandomFixedOffset(filename):
+        if not Settings.isRandomStart() or (filename in [None, ""]):
+            return -1
+        fixedOffsetSetting = "randomFixedAudioOffset"
+        if Settings.isVideoFile(filename):
+            fixedOffsetSetting = "randomFixedVideoOffset"
+        return int(float(ADDON.getSetting(fixedOffsetSetting)))
 
     @staticmethod
     def isPlayMovieList():
@@ -562,6 +595,10 @@ class Settings():
         return False
 
     @staticmethod
+    def useTrailers():
+        return ADDON.getSetting("useTrailers") == "true"
+
+    @staticmethod
     def onlyPlaySingleTheme():
         return ADDON.getSetting("singleThemeOnly") == 'true'
 
@@ -596,3 +633,9 @@ class Settings():
     @staticmethod
     def setTvTunesId():
         ADDON.setSetting("tvtunesId", Settings.getTvTunesId())
+
+    @staticmethod
+    def getLocalThemeLibrary():
+        if ADDON.getSetting("useLocalThemeLibrary") != "true":
+            return None
+        return ADDON.getSetting("localThemeLibrary")

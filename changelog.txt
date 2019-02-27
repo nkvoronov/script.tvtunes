@@ -1,3 +1,33 @@
+v100.5.8 (2017-02-03)
+- Add support to add button to Estuary Video Info Dialog
+
+v100.5.7 (2017-01-27)
+- Support deeper nesting for TV episodes
+
+v100.5.6 (2017-01-23)
+- Fix issue where a theme can restart if moving between series
+- Support local theme library
+
+v100.5.5 (2017-01-22)
+- Improve theme playing when TV Show listing is enabled
+
+v100.5.4 (2017-01-02)
+- Add support for webm video files
+- Add option to use trailers as theme videos
+
+v100.5.3 (2016-12-07)
+- Update for support of URepo
+
+v100.5.2 (2016-12-04)
+- Allow set fixed random start for either video or audio
+
+v100.5.1 (2016-12-02)
+- Fix random start for video themes
+
+v100.5.0 (2016-12-01)
+- Support NFS mounted files better
+- Add support for starting a theme a fixed period in
+
 v6.4.3 (2016-09-18)
 - Support saving themes to authenticated shares
 
