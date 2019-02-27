@@ -7,7 +7,7 @@ import xbmcaddon
 import xbmcvfs
 import xbmcgui
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 ADDON_ID = ADDON.getAddonInfo('id')
 
 
@@ -328,7 +328,7 @@ class Settings():
     def reloadSettings():
         # Force the reload of the settings to pick up any new values
         global ADDON
-        ADDON = xbmcaddon.Addon(id='script.tvtunes')
+        ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
         # The user may have change the display settings to show or hide the info button
         # so make sure we update it
         WindowShowing.updateHideVideoInfoButton()

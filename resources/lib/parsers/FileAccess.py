@@ -12,7 +12,7 @@ import xbmcaddon
 VFS_AVAILABLE = True
 
 
-__addon__     = xbmcaddon.Addon(id='script.tvtunes')
+__addon__     = xbmcaddon.Addon(id='script.tvtunes.ex')
 __addonid__   = __addon__.getAddonInfo('id')
 
 

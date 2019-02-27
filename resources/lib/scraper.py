@@ -15,7 +15,7 @@ from settings import normalize_string
 from settings import dir_exists
 from themeFetcher import TvTunesFetcher
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 
 
 #################################

@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: TvTunes
-# Addon id: script.tvtunes
-# Addon Provider: robwebset
+# Addon id: script.tvtunes.ex
+# Addon Provider: robwebset, YLLOW_DRAGON
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"

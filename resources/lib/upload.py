@@ -23,7 +23,7 @@ from themeFinder import ThemeFiles
 from idLookup import IdLookup
 from library import ThemeLibrary
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 ADDON_ID = ADDON.getAddonInfo('id')
 
 

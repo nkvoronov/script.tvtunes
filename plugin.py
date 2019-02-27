@@ -26,7 +26,7 @@ from resources.lib.settings import dir_exists
 from resources.lib.themeFetcher import TvTunesFetcher
 from resources.lib.themeFinder import ThemeFiles
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 ICON = ADDON.getAddonInfo('icon')
 FANART = ADDON.getAddonInfo('fanart')
 

@@ -14,7 +14,7 @@ from settings import os_path_split
 from settings import os_path_join
 from idLookup import IdLookup
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 
 
 # Class to handle the uploading of themes

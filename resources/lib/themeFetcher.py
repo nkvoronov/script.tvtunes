@@ -23,7 +23,7 @@ from library import ThemeLibrary
 import soundcloud
 from idLookup import IdLookup
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 ADDON_ID = ADDON.getAddonInfo('id')
 ICON = ADDON.getAddonInfo('icon')
 

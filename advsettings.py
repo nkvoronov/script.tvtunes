@@ -11,7 +11,7 @@ import datetime
 from resources.lib.settings import log
 from resources.lib.settings import Settings
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 
 
 # This class reads the advancedsettings.xml file like it was a text file

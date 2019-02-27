@@ -7,7 +7,7 @@ import xbmc
 from resources.lib.settings import log
 from resources.lib.scraper import TvTunesScraper
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 
 
 #########################
@@ -39,4 +39,4 @@ if __name__ == '__main__':
         xbmc.executebuiltin("Dialog.Close(all, true)", True)
 
         log("TvTunes: Running as Addon/Plugin")
-        xbmc.executebuiltin("RunAddon(script.tvtunes)")
+        xbmc.executebuiltin("RunAddon(script.tvtunes.ex)")

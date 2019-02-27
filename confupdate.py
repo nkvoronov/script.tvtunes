@@ -10,7 +10,7 @@ import datetime
 from resources.lib.settings import log
 from resources.lib.settings import os_path_join
 
-ADDON = xbmcaddon.Addon(id='script.tvtunes')
+ADDON = xbmcaddon.Addon(id='script.tvtunes.ex')
 
 
 # Ideally we would use an XML parser to do this like ElementTree
@@ -74,7 +74,7 @@ class ConfUpdate():
         dialogXmlFile.close()
 
         # Now check to see if the skin file has already had the tvtunes bits added
-        if 'script.tvtunes' in dialogXmlStr:
+        if 'script.tvtunes.ex' in dialogXmlStr:
             # Already have tvtunes referenced, so we do not want to do anything else
             # to this file
             log("DialogVideoInfo: TvTunes already referenced in %s, skipping file" % dialogXml, xbmc.LOGINFO)
@@ -104,9 +104,9 @@ class ConfUpdate():
         DIALOG_VIDEO_INFO_BUTTON = '''\n\t\t\t\t\t</control>\n\t\t\t\t\t<control type="button" id="%d">
 \t\t\t\t\t\t<description>TvTunes</description>
 \t\t\t\t\t\t<include>ButtonInfoDialogsCommonValues</include>
-\t\t\t\t\t\t<label>$ADDON[script.tvtunes 32105]</label>
-\t\t\t\t\t\t<onclick>RunScript(script.tvtunes,mode=solo)</onclick>
-\t\t\t\t\t\t<visible>System.HasAddon(script.tvtunes) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>'''
+\t\t\t\t\t\t<label>$ADDON[script.tvtunes.ex 32105]</label>
+\t\t\t\t\t\t<onclick>RunScript(script.tvtunes.ex,mode=solo)</onclick>
+\t\t\t\t\t\t<visible>System.HasAddon(script.tvtunes.ex) + [Container.Content(TVShows) | Container.Content(movies) | Container.Content(musicvideos)] + IsEmpty(Window(movieinformation).Property("TvTunes_HideVideoInfoButton"))</visible>'''
 
         insertTxt = previousButton + (DIALOG_VIDEO_INFO_BUTTON % idval)
         dialogXmlStr = dialogXmlStr.replace(previousButton, insertTxt)

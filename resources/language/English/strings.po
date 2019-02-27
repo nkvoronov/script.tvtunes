@@ -1,7 +1,7 @@
 # Kodi Media Center language file
 # Addon Name: TvTunes
-# Addon id: script.tvtunes
-# Addon Provider: robwebset
+# Addon id: script.tvtunes.ex
+# Addon Provider: robwebset, YLLOW_DRAGON
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -289,7 +289,7 @@ msgid "Replace existing theme?"
 msgstr ""
 
 msgctxt "#32105"
-msgid "TvTunes"
+msgid "General"
 msgstr ""
 
 msgctxt "#32106"
@@ -311,8 +311,6 @@ msgstr ""
 msgctxt "#32110"
 msgid "Downloading to"
 msgstr ""
-
-#empty strings from id 32111 to 32111
 
 msgctxt "#32112"
 msgid "Choose for"
@@ -458,8 +456,6 @@ msgctxt "#32150"
 msgid "Update Estuary Skin"
 msgstr ""
 
-#empty strings from id 32151 to 32200
-
 msgctxt "#32201"
 msgid "Movies"
 msgstr ""
@@ -507,8 +503,6 @@ msgstr ""
 msgctxt "#32213"
 msgid "Retrieve Missing Music Video Themes Only"
 msgstr ""
-
-#empty strings from id 32214 to 32990
 
 msgctxt "#32991"
 msgid "Playback"
