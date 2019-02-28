@@ -519,3 +519,7 @@ msgstr "Файлы"
 msgctxt "#32994"
 msgid "Error: Failed to connect to goear.com"
 msgstr "Ошибка: не удалось подключиться к goear.com"
+
+msgctxt "#32995"
+msgid "TvTunes"
+msgstr "TvTunes"

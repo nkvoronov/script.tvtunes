@@ -291,6 +291,7 @@ class WindowShowing():
 
     @staticmethod
     def updateHideVideoInfoButton():
+        log("updateHideVideoInfoButton")
         if Settings.hideVideoInfoButton():
             xbmcgui.Window(12003).setProperty("TvTunes_HideVideoInfoButton", "true")
         else:
@@ -298,6 +299,7 @@ class WindowShowing():
 
     @staticmethod
     def updateShowOnContextMenu():
+        log("updateHideVideoInfoButton")
         if Settings.showOnContextMenu():
             xbmcgui.Window(10000).setProperty("TvTunes_ShowContextMenu", "true")
         else:
