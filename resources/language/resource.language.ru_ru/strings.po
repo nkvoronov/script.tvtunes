@@ -1,0 +1,525 @@
+# Kodi Media Center language file
+# Addon Name: TvTunes Ex
+# Addon id: script.tvtunes.ex
+# Addon Provider: robwebset, YLLOW_DRAGON
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-addons/language/ru_RU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgctxt "Addon Summary"
+msgid "Retrieve and play your soundtrack or video themes whilst browsing your library"
+msgstr "Получить и воспроизвести музыкальную темы, просматривая вашу библиотеку"
+
+msgctxt "Addon Description"
+msgid "TvTunes is equipped with powerful features that enable the fetching, organising and playing of themes whilst browsing your Kodi library."
+msgstr "TvTunes оснащен мощными функциями, которые позволяют извлекать, организовывать и воспроизводить темы во время просмотра вашей библиотеки Kodi."
+
+msgctxt "Addon Disclaimer"
+msgid "The collection of themes is maintain as a source to consult historical archives of music themes for movies and series. Thus its only purpose is educational and referential, and it is not maintained for the purpose of reselling and re-distributing music or for profitable purpose. Its access is intended strictly in the same way people access plots, trailers, scripts or other material in connection to a film. Any donation is with the purpose of supporting TvTunes' development and towards the costs of maintaining the library. Any holder of rights to these themes who would like to have their material removed from the archives just needs to request so by contacting TvTunes's Theme Library via the Kodi forum."
+msgstr "Коллекция тем поддерживается в качестве источника для ознакомления с историческими архивами музыкальных тем для фильмов и сериалов. Таким образом, его единственная цель - образовательная и справочная, и она не поддерживается с целью перепродажи и перераспределения музыки или с выгодой. Его доступ предназначен точно так же, как люди получают доступ к сюжетам, трейлерам, сценариям или другим материалам в связи с фильмом. Любое пожертвование делается с целью поддержки развития TvTunes и расходов на содержание библиотеки. Любой обладатель прав на эти темы, кто хотел бы удалить свои материалы из архивов, должен просто запросить это, связавшись с библиотекой тем TvTunes через форум Kodi."
+
+msgctxt "#32001"
+msgid "Play theme in loop"
+msgstr "Воспроизвести тему в цикле"
+
+msgctxt "#32002"
+msgid "Theme volume"
+msgstr "Громкость темы"
+
+msgctxt "#32003"
+msgid "Use Protected SMB share"
+msgstr "Использовать защищенный SMB ресурс"
+
+msgctxt "#32004"
+msgid "Username:"
+msgstr "Имя пользователя:"
+
+msgctxt "#32005"
+msgid "Password:"
+msgstr "Пароль:"
+
+msgctxt "#32006"
+msgid "Store tunes in a custom path"
+msgstr "Сохранить темы по пользовательскому пути"
+
+msgctxt "#32007"
+msgid "Path:"
+msgstr "Путь:"
+
+msgctxt "#32008"
+msgid "Fade tune out when exiting"
+msgstr "Уменьшать громкость темы при выходе"
+
+msgctxt "#32009"
+msgid "Automatically Download Theme If"
+msgstr "Автоматически загружать тему, если"
+
+msgctxt "#32010"
+msgid "Shuffle multiple tracks"
+msgstr "Перемешать несколько треков"
+
+msgctxt "#32011"
+msgid "Random start time"
+msgstr "Случайное время начала"
+
+msgctxt "#32012"
+msgid "Change File Types"
+msgstr "Изменить типы файлов"
+
+msgctxt "#32013"
+msgid "Fade in the tune when starting"
+msgstr "Увеличивать громкость темы при старте"
+
+msgctxt "#32014"
+msgid "Always add additional themes (no overwrite)"
+msgstr "Всегда добавлять дополнительные темы (без перезаписи)"
+
+msgctxt "#32015"
+msgid "Search for movie themes"
+msgstr "Поиск тем фильма"
+
+msgctxt "#32016"
+msgid "Play themes when browsing Movie list"
+msgstr "Воспроизводить темы при просмотре списка фильмов"
+
+msgctxt "#32017"
+msgid "Play themes when browsing TV Show list"
+msgstr "Воспроизводить темы при просмотре списка сериалов"
+
+msgctxt "#32018"
+msgid "Debugging"
+msgstr "Отладка"
+
+msgctxt "#32019"
+msgid "Enable debug logging"
+msgstr "Включить журнал отладки"
+
+msgctxt "#32020"
+msgid "Show the TvTunes button on the Video Info screen"
+msgstr "Показать кнопку TvTunes в окне информации о видео"
+
+msgctxt "#32021"
+msgid "Fade out after playing for (minutes)"
+msgstr "Уменьшать громкость темы в течение (мин)"
+
+msgctxt "#32022"
+msgid "Operations"
+msgstr "Операции"
+
+msgctxt "#32023"
+msgid "Browse Themes"
+msgstr "Просмотр тем"
+
+msgctxt "#32024"
+msgid "Delay Audio Theme Start (Seconds)"
+msgstr "Задержка запуска темы (сек)"
+
+msgctxt "#32025"
+msgid "Support themes in sub directories"
+msgstr "Поддержка тем в подкаталогах"
+
+msgctxt "#32026"
+msgid "Directory Name"
+msgstr "Имя каталога"
+
+msgctxt "#32027"
+msgid "Limit track duration when multiple themes (seconds)"
+msgstr "Ограничить длит. трека, когда несколько тем (сек)"
+
+msgctxt "#32028"
+msgid "Default Theme Search Source"
+msgstr "Источник поиска тем по умолчанию"
+
+msgctxt "#32029"
+msgid "Play themes when browsing Music Video list"
+msgstr "Воспроизводить темы при просмотре списка муз. видео"
+
+msgctxt "#32030"
+msgid "All"
+msgstr "Все"
+
+msgctxt "#32031"
+msgid "televisiontunes.com"
+msgstr "televisiontunes.com"
+
+msgctxt "#32032"
+msgid "soundcloud.com"
+msgstr "soundcloud.com"
+
+msgctxt "#32033"
+msgid "Block Refresh Rate Change"
+msgstr "Блокировка изменения частоты обновления"
+
+msgctxt "#32034"
+msgid "goear.com"
+msgstr "goear.com"
+
+msgctxt "#32035"
+msgid "Prompt User"
+msgstr "Запрос пользователя"
+
+msgctxt "#32036"
+msgid "Never"
+msgstr "Никогда"
+
+msgctxt "#32037"
+msgid "Only Single Entry Found"
+msgstr "Найдена только 1 запись"
+
+msgctxt "#32038"
+msgid "Priority 1 (*) Entry Found"
+msgstr "Приоритет 1 (*) запись найдена"
+
+msgctxt "#32039"
+msgid "Priority 1 (*) or 2 (~) Entry Found"
+msgstr "Приоритет 1 (*) или 2 (~) найдено"
+
+msgctxt "#32079"
+msgid "Startup"
+msgstr "При запуске"
+
+msgctxt "#32080"
+msgid "Reset Volume On Startup"
+msgstr "Сбросить громкость при запуске"
+
+msgctxt "#32081"
+msgid "Set Volume On Startup To"
+msgstr "Установить громкость при запуске в"
+
+msgctxt "#32082"
+msgid "Audio File Types"
+msgstr "Типы аудио файлов"
+
+msgctxt "#32083"
+msgid "Video File Types"
+msgstr "Типы видео файлов"
+
+msgctxt "#32084"
+msgid "Enable Theme Playing (Restart Required)"
+msgstr "Включить воспроизведение темы (требуется перезагрузка)"
+
+msgctxt "#32085"
+msgid "When A Video Theme Exists"
+msgstr "Когда тема видео существует"
+
+msgctxt "#32086"
+msgid "Mix With Audio Themes"
+msgstr "Перемешать с аудио темами"
+
+msgctxt "#32087"
+msgid "Play Video Themes First"
+msgstr "Играть видио темы первыми"
+
+msgctxt "#32088"
+msgid "Only Play Video Themes"
+msgstr "Играть только видео темы"
+
+msgctxt "#32089"
+msgid "Only ever play single theme"
+msgstr "Каждый раз играть одну тему"
+
+msgctxt "#32090"
+msgid "Repeat Single Audio Theme After Video"
+msgstr "Повторять одну аудио тему после видео"
+
+msgctxt "#32091"
+msgid "Update advancedsettings.xml File"
+msgstr "Обновить файл advancedsettings.xml"
+
+msgctxt "#32092"
+msgid "This action will update the file advancedsettings.xml to ensure the TvTunes theme files are handled correctly. Make sure any changes are saved before running. Continue?"
+msgstr "Это действие обновит файл advancedsettings.xml, чтобы обеспечить правильную обработку файлов темы TvTunes. Убедитесь, что все изменения сохранены перед запуском. Продолжить?"
+
+msgctxt "#32093"
+msgid "Unable to update advancedsettings.xml"
+msgstr "Невозможно обновить advancedsettings.xml"
+
+msgctxt "#32094"
+msgid "Please check the log for more details"
+msgstr "Пожалуйста, проверьте журнал для более подробной информации"
+
+msgctxt "#32095"
+msgid "advancedsettings.xml update complete"
+msgstr "Обновление advancedsettings.xml завершено"
+
+msgctxt "#32096"
+msgid "Show TvTunes On Context Menu"
+msgstr "Показать TvTunes в контекстном меню"
+
+msgctxt "#32097"
+msgid "Support TvTunes Improvements"
+msgstr "Поддержка улучшений TvTunes"
+
+msgctxt "#32098"
+msgid "TvTunes ID:"
+msgstr "TvTunes ID:"
+
+msgctxt "#32099"
+msgid "Enable Theme Library"
+msgstr "Включить библиотеку тем"
+
+msgctxt "#32100"
+msgid "Show Selection Dialog If Auto Match Fails"
+msgstr "Показать диалог выбора при сбое соответствия"
+
+msgctxt "#32101"
+msgid "ERROR"
+msgstr "ОШИБКА"
+
+msgctxt "#32102"
+msgid "site unreachable"
+msgstr "сайт недоступен"
+
+msgctxt "#32103"
+msgid "TvTune downloader"
+msgstr "TvTune загрузчик"
+
+msgctxt "#32104"
+msgid "Replace existing theme?"
+msgstr "Заменить существующую тему?"
+
+msgctxt "#32105"
+msgid "General"
+msgstr "Общие"
+
+msgctxt "#32106"
+msgid "Getting information..."
+msgstr "Получение информации..."
+
+msgctxt "#32107"
+msgid "Searching for"
+msgstr "Поиск для"
+
+msgctxt "#32108"
+msgid "CANCELLED"
+msgstr "ОТМЕНЕНО"
+
+msgctxt "#32109"
+msgid "Operation cancelled by user."
+msgstr "Операция отменена пользователем."
+
+msgctxt "#32110"
+msgid "Downloading to"
+msgstr "Загрузка в"
+
+msgctxt "#32112"
+msgid "Choose for"
+msgstr "Выбрать для"
+
+msgctxt "#32113"
+msgid "ENTER MANUAL SEARCH"
+msgstr "РУЧНОЙ ПОИСК"
+
+msgctxt "#32114"
+msgid "Download this one?"
+msgstr "Скачать этот?"
+
+msgctxt "#32115"
+msgid "Search results will be incomplete"
+msgstr "Результаты поиска будут неполными"
+
+msgctxt "#32118"
+msgid "Manual Search..."
+msgstr "Ручной поиск..."
+
+msgctxt "#32119"
+msgid "Continue with next theme search?"
+msgstr "Продолжить поиск следующей темы?"
+
+msgctxt "#32120"
+msgid "Search Using %s..."
+msgstr "Искать с помощью %s..."
+
+msgctxt "#32121"
+msgid "Search Using All Sites (May Be Slow)"
+msgstr "Поиск по всем сайтам (может быть медленнее)"
+
+msgctxt "#32123"
+msgid "Theme Library Unavailable"
+msgstr "Библиотека тем недоступна"
+
+msgctxt "#32124"
+msgid "Theme Library Audio"
+msgstr "Библиотека тем аудио"
+
+msgctxt "#32125"
+msgid "Theme Library"
+msgstr "Библиотека тем"
+
+msgctxt "#32126"
+msgid "Theme Library Video"
+msgstr "Библиотека тем видео"
+
+msgctxt "#32127"
+msgid "Play themes when viewing Video Information"
+msgstr "Воспроизведение тем при просмотре видеоинформации"
+
+msgctxt "#32128"
+msgid "Play themes when browsing TV Show Seasons"
+msgstr "Воспроизведение тем при просмотре сезонов"
+
+msgctxt "#32129"
+msgid "Play themes when browsing TV Show Episodes"
+msgstr "Воспроизведение тем при просмотре серий"
+
+msgctxt "#32130"
+msgid "Play themes when browsing Music Library"
+msgstr "Воспроизведение тем при просмотре библиотеки музыки"
+
+msgctxt "#32131"
+msgid "Plex Theme"
+msgstr "Plex тема"
+
+msgctxt "#32132"
+msgid "Plex Library"
+msgstr "Plex библиотека"
+
+msgctxt "#32133"
+msgid "Delay Video Theme Start (Seconds)"
+msgstr "Задержка запуска темы видео (сек)"
+
+msgctxt "#32134"
+msgid "This will update your Confluence Skin to include the TvTunes features. Continue?"
+msgstr "Это обновит вашу обложку Confluence для включения функций TvTunes. Продолжить?"
+
+msgctxt "#32135"
+msgid "Unable to update the Confluence skin"
+msgstr "Невозможно обновить обложку Confluence"
+
+msgctxt "#32136"
+msgid "Please check the log for more details"
+msgstr "Пожалуйста, проверьте журнал для более подробной информации"
+
+msgctxt "#32137"
+msgid "Not all files were updated as expected"
+msgstr "Не все файлы были обновлены, как ожидалось"
+
+msgctxt "#32138"
+msgid "Confluence Skin Updated"
+msgstr "Обложка Confluence обновлена"
+
+msgctxt "#32139"
+msgid "It is recommended that you now restart Kodi"
+msgstr "Рекомендуется перезапустить Kodi."
+
+msgctxt "#32140"
+msgid "Update Confluence Skin"
+msgstr "Обновить обложку Confluence"
+
+msgctxt "#32141"
+msgid "Fixed Audio Start Time Into Media (Seconds)"
+msgstr "Фикс. время запуска аудио в медиа (сек)"
+
+msgctxt "#32142"
+msgid "Fixed Video Start Time Into Media (Seconds)"
+msgstr "Фикс. время запуска видео в медиа (сек)"
+
+msgctxt "#32143"
+msgid "Use Trailer Video If No Theme Available"
+msgstr "Используйте трейлер для видео, если тема не доступна"
+
+msgctxt "#32144"
+msgid "Use Local Theme Library"
+msgstr "Использовать локальную библиотеку тем"
+
+msgctxt "#32145"
+msgid "Local Theme Library Location"
+msgstr "Расположение локальной библиотеки тем"
+
+msgctxt "#32146"
+msgid "Unable to update the Estuary skin"
+msgstr "Невозможно обновить обложку Estuary"
+
+msgctxt "#32147"
+msgid "Estuary Skin Updated"
+msgstr "Обложка Estuary обновлена"
+
+msgctxt "#32148"
+msgid "This will update your Estuary Skin to include the TvTunes features. Continue?"
+msgstr "Это обновит вашу обложку Estuary для включения функций TvTunes. Продолжить?"
+
+msgctxt "#32149"
+msgid "Unable to update the Estuary skin"
+msgstr "Невозможно обновить обложку Estuary"
+
+msgctxt "#32150"
+msgid "Update Estuary Skin"
+msgstr "Обновить обложку Estuary"
+
+msgctxt "#32201"
+msgid "Movies"
+msgstr "Фильмы"
+
+msgctxt "#32202"
+msgid "TV Shows"
+msgstr "Сериалы"
+
+msgctxt "#32203"
+msgid "Music Videos"
+msgstr "Муз. видео"
+
+msgctxt "#32204"
+msgid "[Filter]: Show Only Missing Themes"
+msgstr "[Фильтр]: Показать только недостающие темы"
+
+msgctxt "#32205"
+msgid "[Action]: Retrieve Missing Audio Themes"
+msgstr "[Действие]: Получить недостающие аудио темы"
+
+msgctxt "#32206"
+msgid "You have themes that are not in themes folders."
+msgstr "У вас есть темы, которых нет в папках тем."
+
+msgctxt "#32207"
+msgid "Move themes into themes folder?"
+msgstr "Переместить темы в папку тем?"
+
+msgctxt "#32209"
+msgid "[Action]: Retrieve Missing Video Themes"
+msgstr "[Действие]: Получить недостающие видео темы"
+
+msgctxt "#32210"
+msgid "Retrieve All Missing Themes"
+msgstr "Получить все недостающие темы"
+
+msgctxt "#32211"
+msgid "Retrieve Missing TV Themes Only"
+msgstr "Получить только недостающие темы сериалов"
+
+msgctxt "#32212"
+msgid "Retrieve Missing Movie Themes Only"
+msgstr "Получить только недостающие темы фильмов"
+
+msgctxt "#32213"
+msgid "Retrieve Missing Music Video Themes Only"
+msgstr "Получить только недостающие темы музыкального видео"
+
+msgctxt "#32991"
+msgid "Playback"
+msgstr "Воспроизведение"
+
+msgctxt "#32992"
+msgid "Download"
+msgstr "Загрузить"
+
+msgctxt "#32993"
+msgid "File system"
+msgstr "Файлы"
+
+msgctxt "#32994"
+msgid "Error: Failed to connect to goear.com"
+msgstr "Ошибка: не удалось подключиться к goear.com"
+
+msgctxt "#32995"
+msgid "TvTunes"
+msgstr "TvTunes"
