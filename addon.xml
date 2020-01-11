@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.tvtunes.ex" name="TvTunes Ex" version="100.5.8.007" provider-name="robwebset, YLLOW_DRAGON">
+<addon id="script.tvtunes.ex" name="TvTunes Ex" version="100.5.9.008" provider-name="robwebset, YLLOW_DRAGON">
 	<requires>
-		<import addon="xbmc.python" version="2.20.0"/>
+		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="script.module.simplejson" version="3.3.0"/>
 		<import addon="script.module.beautifulsoup" version="3.2.1"/>
 		<import addon="script.module.requests" version="2.3.0"/>
